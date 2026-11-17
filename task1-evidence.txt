@@ -1,0 +1,83 @@
+# Docker containers
+NAME               IMAGE            COMMAND                  SERVICE      CREATED         STATUS         PORTS
+hw4-agent-node-1   hw4-agent-node   "sleep infinity"         agent-node   7 minutes ago   Up 7 minutes   
+hw4-mock-c2-1      hw4-mock-c2      "python3 /app/c2.py"     mock-c2      7 minutes ago   Up 7 minutes   
+hw4-web-lab-1      hw4-web-lab      "python3 -m http.ser…"   web-lab      7 minutes ago   Up 7 minutes   
+
+# Docker Networks
+[
+    {
+        "Name": "hw4_hw4net",
+        "Id": "79095ef6c32486158f5efbd3d25c3338d392d7e536422fd5f964fe6f9ea8e49f",
+        "Created": "2026-11-17T00:18:03.515253141-05:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.30.0.0/24",
+                    "Gateway": "172.30.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.bridge.name": "br-hw4"
+        },
+        "Labels": {
+            "com.docker.compose.config-hash": "e580e00a8df4afa6daed1a5508d627bc60f2e78f7238f1a029114a04b5c41e3f",
+            "com.docker.compose.network": "hw4net",
+            "com.docker.compose.project": "hw4",
+            "com.docker.compose.version": "5.7.1"
+        },
+        "Containers": {
+            "20ab7380cdf6ef212171a026b1d1ee1b533e300105dae8800902a797eea7d5db": {
+                "Name": "hw4-agent-node-1",
+                "EndpointID": "cfff9ddffb7df3949d630bb2b0e3bd706c516e02e741d498e52f1ec3993ed6cb",
+                "MacAddress": "36:89:3b:9b:76:33",
+                "IPv4Address": "172.30.0.10/24",
+                "IPv6Address": ""
+            },
+            "6a97dfa395c2da51677a70c86b634411107049338769db27b5d8e7044e432102": {
+                "Name": "hw4-web-lab-1",
+                "EndpointID": "9c26a0a8b5cfef0a2323db32bf52819b4cea54ad7bab62fa76af02a0385d8c08",
+                "MacAddress": "62:11:40:05:a0:86",
+                "IPv4Address": "172.30.0.40/24",
+                "IPv6Address": ""
+            },
+            "7087b5d3a9b379205b5f0395f56d7538ff628be9ad556d71ae0e0cb6cd6f8198": {
+                "Name": "hw4-mock-c2-1",
+                "EndpointID": "1c495b4e54e63e5684efc7f77fdb62ae37d3585501f63788087597e8eb4de638",
+                "MacAddress": "1e:c3:77:47:69:d6",
+                "IPv4Address": "172.30.0.66/24",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.30.0.0/24": {
+                        "IPsInUse": 6,
+                        "DynamicIPsAvailable": 250
+                    }
+                }
+            }
+        }
+    }
+]
+
+# Original SHA 256
+972336686750d8332dbacc675df3f269bed8dd9693fafccb94ebfe8c48e3a5df  /app/fake_secrets.txt
+
+# Received SHA 256
+972336686750d8332dbacc675df3f269bed8dd9693fafccb94ebfe8c48e3a5df  /data/received.bin
